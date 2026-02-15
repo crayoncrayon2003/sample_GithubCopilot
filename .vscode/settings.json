@@ -1,0 +1,316 @@
+{
+  // ====================
+  // GitHub Copilot Settings
+  // ====================
+  
+  // Copilot を有効化
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "python": true
+  },
+
+  // インラインサジェストを有効化
+  "editor.inlineSuggest.enabled": true,
+
+  // Copilot のサジェストを自動的に表示
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  // Copilot Chat の設定
+  "github.copilot.chat.localeOverride": "ja",
+
+  // ====================
+  // Python Settings
+  // ====================
+
+  // Python インタープリタ
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.rulers": [100]
+  },
+
+  // Python の型チェック
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  // Pylance の設定
+  "python.languageServer": "Pylance",
+
+  // ====================
+  // Linting & Formatting
+  // ====================
+
+  // Black フォーマッター
+  "black-formatter.args": [
+    "--line-length=100"
+  ],
+
+  // isort
+  "isort.args": [
+    "--profile=black"
+  ],
+
+  // Ruff (高速リンター)
+  "ruff.lint.enable": true,
+  "ruff.format.args": [
+    "--line-length=100"
+  ],
+
+  // Mypy (型チェック)
+  "mypy.enabled": true,
+  "mypy.runUsingActiveInterpreter": true,
+
+  // ====================
+  // Testing
+  // ====================
+
+  // pytest
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+
+  // ====================
+  // Editor Settings
+  // ====================
+
+  // オートセーブ
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // 文字エンコーディング
+  "files.encoding": "utf8",
+
+  // 改行コード
+  "files.eol": "\n",
+
+  // 行末の空白を自動削除
+  "files.trimTrailingWhitespace": true,
+
+  // ファイル末尾に空行を挿入
+  "files.insertFinalNewline": true,
+
+  // タブサイズ
+  "editor.tabSize": 4,
+
+  // タブをスペースに変換
+  "editor.insertSpaces": true,
+
+  // 自動フォーマット
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+
+  // 行の折り返し
+  "editor.wordWrap": "on",
+
+  // ミニマップ
+  "editor.minimap.enabled": true,
+
+  // ブラケットペアのカラー表示
+  "editor.bracketPairColorization.enabled": true,
+
+  // インデントガイド
+  "editor.guides.indentation": true,
+  "editor.guides.bracketPairs": true,
+
+  // ====================
+  // Language Specific Settings
+  // ====================
+
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+
+  // YAML
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced"
+  },
+
+  // TOML
+  "[toml]": {
+    "editor.tabSize": 2
+  },
+
+  // Shell Script
+  "[shellscript]": {
+    "editor.tabSize": 2
+  },
+
+  // ====================
+  // Git Settings
+  // ====================
+
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // ====================
+  // Terminal Settings
+  // ====================
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 14,
+
+  // ====================
+  // Explorer Settings
+  // ====================
+
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+
+  // ====================
+  // Search Settings
+  // ====================
+
+  "search.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true,
+    "**/venv": true,
+    "**/env": true,
+    "**/.venv": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.git": true,
+    "**/htmlcov": true,
+    "**/.coverage": true,
+    "**/*.egg-info": true
+  },
+
+  // ====================
+  // Files Settings
+  // ====================
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": false,
+    "**/.mypy_cache": false,
+    "**/.ruff_cache": false
+  },
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/venv/**": true,
+    "**/env/**": true,
+    "**/.venv/**": true,
+    "**/__pycache__/**": true,
+    "**/.pytest_cache/**": true,
+    "**/.mypy_cache/**": true
+  },
+
+  // ====================
+  // Suggestions Settings
+  // ====================
+
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+
+  // ====================
+  // IntelliSense Settings
+  // ====================
+
+  "editor.parameterHints.enabled": true,
+  "editor.snippetSuggestions": "top",
+
+  // ====================
+  // Security Settings
+  // ====================
+
+  "security.workspace.trust.untrustedFiles": "prompt",
+
+  // ====================
+  // Telemetry Settings
+  // ====================
+
+  "telemetry.telemetryLevel": "off",
+
+  // ====================
+  // Extensions Settings
+  // ====================
+
+  // Error Lens (エラー表示を強化)
+  "errorLens.enabled": true,
+  "errorLens.delay": 500,
+
+  // Path Intellisense
+  "path-intellisense.autoTriggerNextSuggestion": true,
+
+  // ====================
+  // Window Settings
+  // ====================
+
+  "window.zoomLevel": 0,
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
+
+  // ====================
+  // Workbench Settings
+  // ====================
+
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "welcomePage",
+  "workbench.editor.enablePreview": false,
+
+  // ====================
+  // Python-specific Extensions
+  // ====================
+
+  // Jupyter Notebook
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+
+  // ====================
+  // Additional Python Tools
+  // ====================
+
+  // autodocstring
+  "autoDocstring.docstringFormat": "google",
+  "autoDocstring.startOnNewLine": false,
+
+  // Python Docstring Generator
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "information",
+    "reportUnusedVariable": "information"
+  }
+}

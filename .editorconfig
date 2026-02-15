@@ -1,0 +1,189 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# このファイルは、エディタやIDEに依存しないコード整形ルールを定義します
+
+# トップレベルのEditorConfig設定ファイル
+root = true
+
+# ====================
+# すべてのファイル
+# ====================
+[*]
+# 文字エンコーディング
+charset = utf-8
+
+# 改行コード (Unix/Mac形式)
+end_of_line = lf
+
+# ファイル末尾に空行を挿入
+insert_final_newline = true
+
+# 行末の空白を削除
+trim_trailing_whitespace = true
+
+# ====================
+# Python
+# ====================
+[*.py]
+# インデント方式（PEP 8に準拠）
+indent_style = space
+
+# インデント幅（PEP 8に準拠）
+indent_size = 4
+
+# 最大行長（Blackのデフォルト）
+max_line_length = 100
+
+# ====================
+# YAML
+# ====================
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# ====================
+# JSON
+# ====================
+[*.json]
+indent_style = space
+indent_size = 2
+
+# ====================
+# Markdown
+# ====================
+[*.md]
+# Markdownでは行末空白が意味を持つため削除しない
+trim_trailing_whitespace = false
+
+# インデント
+indent_style = space
+indent_size = 2
+
+# 最大行長なし（長い行を許容）
+max_line_length = off
+
+# ====================
+# TOML (pyproject.toml など)
+# ====================
+[*.toml]
+indent_style = space
+indent_size = 2
+
+# ====================
+# INI (setup.cfg など)
+# ====================
+[*.{ini,cfg}]
+indent_style = space
+indent_size = 4
+
+# ====================
+# requirements.txt
+# ====================
+[requirements*.txt]
+indent_style = space
+indent_size = 4
+
+# ====================
+# Shell Scripts
+# ====================
+[*.{sh,bash,zsh}]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+
+# ====================
+# Makefiles
+# ====================
+[Makefile]
+# Makefileは必ずタブを使用
+indent_style = tab
+
+[*.mk]
+indent_style = tab
+
+# ====================
+# Docker
+# ====================
+[Dockerfile*]
+indent_style = space
+indent_size = 2
+
+[*.dockerignore]
+indent_style = space
+indent_size = 2
+
+# ====================
+# 設定ファイル
+# ====================
+
+[.gitignore]
+indent_style = space
+indent_size = 2
+
+[.editorconfig]
+indent_style = space
+indent_size = 2
+
+[.copilotignore]
+indent_style = space
+indent_size = 2
+
+# ====================
+# HTML / XML
+# ====================
+[*.{html,xml}]
+indent_style = space
+indent_size = 2
+
+# ====================
+# CSS / SCSS
+# ====================
+[*.{css,scss,sass}]
+indent_style = space
+indent_size = 2
+
+# ====================
+# JavaScript / TypeScript (補助的な設定)
+# ====================
+[*.{js,jsx,ts,tsx}]
+indent_style = space
+indent_size = 2
+
+# ====================
+# SQL
+# ====================
+[*.sql]
+indent_style = space
+indent_size = 2
+
+# ====================
+# プロジェクト固有の設定
+# ====================
+
+# TODO: プロジェクトに特化した設定をここに追加
+
+# 例:
+# [src/legacy/**]
+# indent_size = 2
+
+# ====================
+# 注意事項
+# ====================
+#
+# 1. EditorConfigをサポートするエディタ・IDE:
+#    - VS Code (拡張機能が必要: EditorConfig for VS Code)
+#    - PyCharm / IntelliJ IDEA (標準サポート)
+#    - Sublime Text (プラグインが必要)
+#    - Vim (プラグインが必要)
+#
+# 2. VS Codeで使用する場合:
+#    拡張機能「EditorConfig for VS Code」をインストール
+#
+# 3. Pythonプロジェクトでは:
+#    - Black: line-length=100 を推奨
+#    - isort: profile=black を推奨
+#    - これらの設定は pyproject.toml に記載
+#
+# 4. 既存のコードベース:
+#    段階的に適用することを推奨
+#
